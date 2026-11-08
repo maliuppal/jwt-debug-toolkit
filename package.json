@@ -1,0 +1,52 @@
+{
+  "name": "jwt-debug-toolkit",
+  "description": "Decode JWT header and payload (no verify), inspect exp/nbf/iat, and print debug summaries—Node.js toolkit for support and local troubleshooting",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Muhammad Ali <maliuppal@users.noreply.github.com> (https://github.com/maliuppal)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maliuppal/jwt-debug-toolkit.git"
+  },
+  "keywords": [
+    "jwt",
+    "json-web-token",
+    "decode",
+    "debug",
+    "claims",
+    "exp",
+    "nbf",
+    "iat",
+    "base64url",
+    "authentication",
+    "typescript",
+    "node"
+  ],
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && mocha test/**/*.mocha.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.17",
+    "mocha": "^10.3.0",
+    "typescript": "~5.7.2"
+  }
+}
